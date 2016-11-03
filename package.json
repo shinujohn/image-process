@@ -1,0 +1,28 @@
+{
+  "name": "image-store",
+  "version": "1.0.0",
+  "description": "stores images",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinujohn/image-store.git"
+  },
+  "author": "sjohn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinujohn/image-store/issues"
+  },
+  "homepage": "https://github.com/shinujohn/image-store#readme",
+  "dependencies": {
+    "amqp": "^0.2.6",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "multer": "^1.2.0",
+    "nconf": "^0.8.4",
+    "shortid": "^2.2.6"
+  }
+}

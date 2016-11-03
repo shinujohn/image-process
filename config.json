@@ -1,0 +1,21 @@
+{
+    "queue": {
+        "host": "localhost",
+        "port": 5672,
+        "login": "guest",
+        "password": "guest",
+        "connectionTimeout": 10000,
+        "authMechanism": "AMQPLAIN",
+        "vhost": "/",
+        "noDelay": true,
+        "ssl": {
+            "enabled": false
+        }
+    },
+    "mongo": {
+        "url": "mongodb://localhost:27017/imageProcessor"
+    },
+    "logger": {
+        "type": "console"
+    }
+}
