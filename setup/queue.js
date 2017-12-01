@@ -17,7 +17,7 @@ class Queue {
     let _this = this;
     return new Promise(function (resolve, reject) {
 
-      let connection = amqp.createConnection(nconf.get('queue'));
+      let connection = amqp.createConnection(nconf.get('config:queue'));
 
       connection.on('error', function (e) {
         console.error("Error from amqp: ", e);
