@@ -1,5 +1,7 @@
 let locator = global.locator;
-class imageProcessorResponder {
+let MediaService = require('./../services/mediaService');
+
+class requestResponder {
 
     constructor() {
     }
@@ -11,6 +13,7 @@ class imageProcessorResponder {
 
         let _this = this;
         let logger = global.locator.logger;
+        let mediaService = new MediaService(global.locator);
 
         /**
          * Gets all unprocessed images

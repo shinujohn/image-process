@@ -2,23 +2,22 @@
 let nconf = require('nconf');
 let Factory = require('./../providers/factory');
 
-class Logger {
+class Config {
 
     constructor(name) {
         global.locator = global.locator || {};
     }
 
     /**
-     * Initialise the setup : connects to the mongdb
+     * Initialise the setup 
      */
     init() {
-        let _this = this;
         return new Promise(function (resolve, reject) {
-            global.locator.logger = Factory.getLogger(nconf.get('config:logger:type'));
+            global.locator.config = nconf.get('config');
             resolve();
         });
     }
 
 }
 
-module.exports = new Logger();
+module.exports = new Config();

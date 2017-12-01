@@ -1,21 +1,32 @@
 {
-    "queue": {
-        "host": "localhost",
-        "port": 5672,
-        "login": "guest",
-        "password": "guest",
-        "connectionTimeout": 10000,
-        "authMechanism": "AMQPLAIN",
-        "vhost": "/",
-        "noDelay": true,
-        "ssl": {
-            "enabled": false
+    "config": {
+        "ENV_NAME": "local",
+        "jwtSecret": "secret",
+        "minimumTranscriptsRequired": 2,
+        "queue": {
+            "host": "localhost",
+            "port": 5672,
+            "login": "guest",
+            "password": "guest",
+            "connectionTimeout": 10000,
+            "authMechanism": "AMQPLAIN",
+            "vhost": "/",
+            "noDelay": true,
+            "ssl": {
+                "enabled": false
+            }
+        },
+        "mongo": { 
+            "url": "mongodb://localhost:27017/media-transcript_local"
+        },
+        "logger": {
+            "type": "console"
+        },
+        "storage": {
+            "type": "azure",
+            "azure_accessKey": "",
+            "azure_storageAccount": "",
+            "azure_container": ""
         }
-    },
-    "mongo": {
-        "url": "mongodb://localhost:27017/imageProcessor"
-    },
-    "logger": {
-        "type": "console"
     }
 }
